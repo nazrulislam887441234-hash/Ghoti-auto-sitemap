@@ -1,0 +1,13 @@
+{
+  "name": "ghoti-auto-sitemap",
+  "version": "1.0.0",
+  "description": "10 lakh products sitemap worker for Ghotimarket",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^3.80.0"
+  }
+}
