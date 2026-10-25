@@ -5,13 +5,12 @@ compatibility_date = "2024-10-01"
 [vars]
 FIREBASE_PROJECT_ID = "ghotimarket"
 
-# অটো রাউট - www এবং non-www ২টার জন্যই
 [[routes]]
 pattern = "ghotimarket.com/product-sitemap.xml"
 zone_name = "ghotimarket.com"
 
 [[routes]]
-pattern = "ghotimarket.com/sitemap-products-*.xml"
+pattern = "ghotimarket.com/sitemap-products*"
 zone_name = "ghotimarket.com"
 
 [[routes]]
@@ -19,5 +18,5 @@ pattern = "www.ghotimarket.com/product-sitemap.xml"
 zone_name = "ghotimarket.com"
 
 [[routes]]
-pattern = "www.ghotimarket.com/sitemap-products-*.xml"
+pattern = "www.ghotimarket.com/sitemap-products*"
 zone_name = "ghotimarket.com"
