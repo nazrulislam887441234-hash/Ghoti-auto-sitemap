@@ -41,7 +41,7 @@ export default {
             const products = await getProductsFromFirebase(PROJECT_ID, num, offset, perBatch);
             if (products.length === 0) break;
             for (let p of products) {
-              const line = `<url><loc>https://ghotimarket.com/product/${escapeXml(p.slug)}</loc><lastmod>${p.createdAt}</lastmod><priority>0.7</priority></url>`;
+              const line = `<url><loc>https://ghotimarket.com/product?${escapeXml(p.slug)}</loc><lastmod>${p.createdAt}</lastmod><priority>0.7</priority></url>`;
               await writer.write(encoder.encode(line));
             }
           }
