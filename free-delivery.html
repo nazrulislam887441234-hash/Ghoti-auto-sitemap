@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#ff6b35">
+<meta name="description" content="ঘটি মার্কেটের ফ্রি ডেলিভারি পণ্য দেখুন। ক্যাটাগরি অনুযায়ী পণ্য খুঁজুন এবং বিস্তারিত জানুন।">
+<title>ফ্রি ডেলিভারি পণ্য | Ghoti Market</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Bengali:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--orange:#ff6b35;--orange2:#ff6a00;--orange3:#ffa500;--orange-pale:#fff2e9;--orange-line:#ffe0cc;--ink:#242424;--muted:#858585;--page:#fff8f3;--white:#fff;--shadow:0 4px 18px rgba(255,106,0,.075)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--page);color:var(--ink);font-family:"Noto Sans Bengali",Inter,sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased;padding-bottom:0}
+a{color:inherit;text-decoration:none}button,input,select{font:inherit}
+svg{display:block;flex-shrink:0}
+.promo-strip{background:linear-gradient(90deg,#ff6a00,#ff8b32);color:#fff;text-align:center;padding:7px 12px;font-size:12px;font-weight:700}
+.promo-strip strong{color:#fff8b9}
+.site-header{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.97);backdrop-filter:blur(14px);border-bottom:1px solid #ffeadc}
+.header-inner{max-width:1280px;margin:auto;padding:14px 22px;display:flex;align-items:center;gap:22px}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.brand-logo{width:43px;height:43px;object-fit:contain}
+.brand-name{font-family:Inter,sans-serif;font-weight:800;font-size:20px;letter-spacing:-.7px;color:var(--orange2);white-space:nowrap;line-height:1.2}
+.brand-tagline{font-size:10px;color:#8d8d8d;margin-top:4px;display:block}
+.header-search{flex:1;position:relative;max-width:650px;margin:0 auto}
+.header-search svg{position:absolute;left:16px;top:50%;transform:translateY(-50%);color:#777;width:19px;height:19px}
+.header-search input{width:100%;height:47px;border:1px solid #e8e8e8;border-radius:28px;background:#fff;padding:0 18px 0 46px;outline:none;font-size:13px;transition:.2s}
+.header-search input:focus{border-color:#ffad7c;box-shadow:0 0 0 3px rgba(255,106,0,.08)}
+.header-actions{display:flex;align-items:center;gap:10px}
+.header-home{width:46px;height:46px;display:grid;place-items:center;border:1px solid #f1e5dd;border-radius:50%;color:var(--orange2);background:#fff8f3}
+.header-home svg{width:22px;height:22px}
+.hero-wrap{max-width:1280px;margin:16px auto 0;padding:0 22px}
+.hero-banner{min-height:132px;border-radius:18px;overflow:hidden;position:relative;background:linear-gradient(110deg,#ff6a00 0%,#ff7830 55%,#ff9a48 100%);color:#fff;padding:23px 28px;display:flex;align-items:center;justify-content:space-between;gap:20px;box-shadow:0 8px 22px rgba(255,106,0,.14)}
+.hero-banner:before{content:"";position:absolute;width:240px;height:240px;border:32px solid rgba(255,255,255,.12);border-radius:50%;right:10%;top:-150px}
+.hero-copy{position:relative;z-index:1}
+.hero-kicker{display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.19);border:1px solid rgba(255,255,255,.27);border-radius:30px;padding:5px 10px;font-size:10px;font-weight:800;letter-spacing:.3px;margin-bottom:8px}
+.hero-kicker svg{width:13px;height:13px}
+.hero-banner h1{font-size:clamp(23px,3vw,31px);line-height:1.35;margin:0;font-weight:800}
+.hero-banner h1 span{color:#fff5bb}
+.hero-banner p{margin:6px 0 0;font-size:12px;color:rgba(255,255,255,.93)}
+.hero-art{position:relative;z-index:1;width:92px;height:92px;margin-right:20px;border-radius:50%;background:rgba(255,255,255,.16);display:grid;place-items:center;flex-shrink:0}
+.hero-art:before{content:"";position:absolute;inset:9px;border:1px dashed rgba(255,255,255,.6);border-radius:50%}
+.hero-art svg{width:43px;height:43px}
+.content{max-width:1280px;margin:22px auto 50px;padding:0 22px}
+.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-bottom:14px}
+.section-head h2{font-size:20px;line-height:1.4;margin:0;font-weight:800}
+.section-head p{font-size:12px;color:var(--muted);margin:4px 0 0}
+.counter{font-size:12px;color:#777;white-space:nowrap}
+.counter strong{color:var(--orange2);font-size:15px}
+.filters{display:grid;grid-template-columns:minmax(180px,1fr) 210px 220px;gap:10px;background:#fff;border:1px solid #f4e7de;border-radius:13px;padding:11px;margin-bottom:17px;box-shadow:0 2px 10px rgba(255,106,0,.025)}
+.search-field{position:relative;min-width:0}
+.search-field svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:#929292;width:15px;height:15px;pointer-events:none}
+.search-field input,.filters select{width:100%;height:42px;border:1px solid #eee3dc;border-radius:9px;background:#fff;color:#343434;outline:none;font-size:12px}
+.search-field input{padding:0 12px 0 39px}
+.filters select{padding:0 11px}
+.search-field input:focus,.filters select:focus{border-color:#ffad7c;box-shadow:0 0 0 2px rgba(255,106,0,.07)}
+.product-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:17px}
+.product-card{min-width:0;background:#fff;border:1px solid #f5e7de;border-radius:19px;overflow:hidden;display:flex;flex-direction:column;position:relative;box-shadow:var(--shadow);transition:transform .18s,border-color .18s,box-shadow .18s}
+.product-card:hover{transform:translateY(-2px);border-color:#ffc49f;box-shadow:0 8px 24px rgba(255,106,0,.12)}
+.product-card:focus-visible{outline:3px solid rgba(255,106,0,.35);outline-offset:2px}
+.image-wrap{position:relative;aspect-ratio:1/1;background:#f7f2ee;overflow:hidden}
+.image-wrap img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .25s}
+.product-card:hover .image-wrap img{transform:scale(1.025)}
+.category-badge{position:absolute;z-index:2;left:12px;top:12px;max-width:62%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;background:rgba(255,255,255,.94);color:var(--orange2);border:1px solid #ffdfca;border-radius:24px;padding:6px 11px;font-size:11px;font-weight:700;box-shadow:0 2px 7px rgba(0,0,0,.04)}
+.discount-badge{position:absolute;z-index:2;right:10px;top:10px;background:#ff4658;color:#fff;border-radius:14px;padding:6px 10px;font:800 11px Inter,sans-serif;box-shadow:0 3px 8px rgba(255,70,88,.18)}
+.card-body{padding:12px 13px 9px;display:flex;flex-direction:column;flex:1;gap:7px}
+.shop-line{display:flex;align-items:center;gap:6px;color:#777;font-size:11px;line-height:1.4;min-height:17px;overflow:hidden}
+.shop-line svg{width:14px;height:14px;color:var(--orange2)}
+.shop-line span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.product-name{font-size:14px;line-height:1.55;font-weight:600;margin:0;color:#262626;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:43px}
+.price-row{display:flex;align-items:baseline;gap:9px;flex-wrap:wrap;margin-top:7px;padding-top:2px}
+.current-price{font-family:Inter,"Noto Sans Bengali",sans-serif;font-size:20px;line-height:1.35;font-weight:800;color:var(--orange2);letter-spacing:-.35px}
+.old-price{font-family:Inter,"Noto Sans Bengali",sans-serif;font-size:13px;color:#777;text-decoration:line-through}
+.saving{font-size:10px;color:#e65a44;font-weight:700;margin-top:-3px}
+.card-bottom{padding:0 13px 13px;margin-top:auto}
+.view-link{display:flex;align-items:center;justify-content:center;gap:7px;width:100%;min-height:38px;border:1px solid #ffdec9;border-radius:11px;background:#fff7f1;color:var(--orange2);font-size:12px;font-weight:800;transition:.18s}
+.view-link svg{width:15px;height:15px}
+.product-card:hover .view-link{background:linear-gradient(90deg,#ff6a00,#ff8733);color:#fff;border-color:transparent}
+.loading-area{display:none;align-items:center;justify-content:center;gap:9px;padding:22px 0;color:#8a817b;font-size:12px}
+.loading-area img{width:42px;height:42px;object-fit:contain}
+.state-panel{grid-column:1/-1;background:#fff;border:1px solid #f4e7de;border-radius:15px;padding:42px 18px;text-align:center}
+.state-panel .state-icon{font-size:30px;color:#ff9a62;margin-bottom:12px}
+.state-panel h3{font-size:16px;margin:0 0 7px}
+.state-panel p{font-size:12px;color:var(--muted);margin:0 auto 14px;max-width:430px}
+.retry-btn{border:0;border-radius:9px;background:linear-gradient(90deg,#ff6a00,#ff8733);color:#fff;padding:10px 16px;font-size:12px;font-weight:700}
+.end-message{display:none;text-align:center;color:#999087;font-size:11px;padding:20px 0 0}
+.site-footer{background:#fff;border-top:1px solid #f3e5dc;text-align:center;padding:22px 15px;color:#8a817b;font-size:11px}
+.site-footer strong{font-family:Inter,sans-serif;color:var(--orange2)}
+.site-footer a{color:var(--orange2);font-weight:700}
+.mobile-nav{display:none}
+@media(min-width:1100px){.product-grid{grid-template-columns:repeat(5,minmax(0,1fr))}}
+@media(max-width:820px){.header-inner{gap:13px;padding:11px 16px}.header-actions{gap:8px}.product-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}.filters{grid-template-columns:minmax(150px,1fr) 170px 180px}.hero-art{margin-right:12px}}
+@media(max-width:600px){
+ body{padding-bottom:77px}
+ .promo-strip{font-size:10px;padding:7px 8px}
+ .header-inner{padding:12px 14px;gap:12px;flex-wrap:nowrap}
+ .brand{gap:7px;min-width:0}
+ .brand-logo{width:35px;height:35px}
+ .brand-name{font-size:clamp(13px,3.6vw,17px);letter-spacing:-.55px}
+ .brand-tagline{display:none}
+ .header-search{order:0;flex:0 0 45px;width:45px;height:45px;margin-left:auto}
+ .header-search svg{left:13px;width:19px;height:19px;color:#666}
+ .header-search input{width:45px;height:45px;border-radius:50%;padding:0;font-size:0;background:#fff;border:1px solid #eee;cursor:pointer}
+ .header-search input:focus{position:absolute;right:0;top:0;width:min(66vw,290px);border-radius:24px;padding:0 13px 0 42px;font-size:12px;background:#fff;z-index:3}
+ .header-actions{margin-left:0}
+ .header-home{width:45px;height:45px;background:#fff4eb;border-color:#ffdfca}
+ .hero-wrap{margin-top:12px;padding:0 12px}
+ .hero-banner{min-height:133px;padding:19px 17px;border-radius:17px}
+ .hero-banner h1{font-size:23px;max-width:260px}
+ .hero-banner p{font-size:11px;line-height:1.75;max-width:280px}
+ .hero-kicker{font-size:9px;padding:4px 8px;margin-bottom:7px}
+ .hero-art{position:absolute;right:-12px;bottom:-20px;width:90px;height:90px;opacity:.48;margin:0}
+ .hero-art svg{width:36px;height:36px}
+ .content{padding:0 12px;margin:19px auto 28px}
+ .section-head{align-items:center;margin-bottom:12px}
+ .section-head h2{font-size:16px}
+ .section-head p{font-size:10px;line-height:1.6}
+ .counter{font-size:10px}
+ .counter strong{font-size:12px}
+ .filters{grid-template-columns:1fr 1fr;padding:8px;gap:7px;margin-bottom:13px;border-radius:12px}
+ .search-field{grid-column:1/-1}
+ .search-field input{height:40px;font-size:11px}
+ .filters select{height:38px;font-size:10px;padding:0 7px}
+ .product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+ .product-card{border-radius:20px}
+ .category-badge{left:9px;top:10px;padding:5px 9px;font-size:10px;max-width:62%}
+ .discount-badge{right:8px;top:9px;padding:6px 8px;font-size:10px;border-radius:13px}
+ .card-body{padding:10px 11px 9px;gap:6px}
+ .shop-line{font-size:10px}
+ .product-name{font-size:13px;line-height:1.55;min-height:40px}
+ .current-price{font-size:18px}
+ .old-price{font-size:12px}
+ .price-row{gap:7px;margin-top:6px}
+ .saving{font-size:9px}
+ .card-bottom{padding:0 11px 11px}
+ .view-link{font-size:11px;min-height:37px;border-radius:11px}
+ .loading-area{padding:17px 0}
+ .loading-area img{width:38px;height:38px}
+ .site-footer{font-size:10px;padding:18px 12px}
+ .mobile-nav{position:fixed;z-index:60;left:0;right:0;bottom:0;display:flex;justify-content:space-around;align-items:stretch;background:rgba(255,255,255,.98);border-top:1px solid #f0e5de;padding:8px 3px calc(8px + env(safe-area-inset-bottom));box-shadow:0 -4px 17px rgba(60,35,20,.07)}
+ .nav-item{display:flex;flex:1;min-width:0;flex-direction:column;align-items:center;justify-content:center;gap:4px;color:#777;font-size:9px;font-weight:600;white-space:nowrap}
+ .nav-item svg{width:23px;height:23px}
+ .nav-item.active{color:var(--orange2)}
+ .nav-item.active svg{color:var(--orange2)}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+   /* --- Bottom Nav FIXED --- */
+       .bottom-nav { 
+    position: fixed; 
+    bottom: 0; 
+    left: 0; 
+    width: 100%; 
+    height: calc(65px + env(safe-area-inset-bottom)); 
+    background: rgba(255,255,255,0.98); 
+    backdrop-filter: blur(15px); 
+    display: flex; 
+    justify-content: space-around; 
+    align-items: center; 
+    border-top: 1px solid #f0e5de; 
+    z-index: 1000; 
+    padding-bottom: env(safe-area-inset-bottom); 
+    box-shadow: 0 -4px 17px rgba(60,35,20,.07);
+}
+.bottom-nav .nav-item { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    color: #777; 
+    font-size: 9px; 
+    font-weight: 600; 
+    flex: 1; 
+}
+.bottom-nav .nav-item svg { 
+    width: 23px;
+    height: 23px;
+    margin-bottom: 4px; 
+}
+.bottom-nav .nav-item.active { 
+    color: var(--orange2); 
+}
+</style>
+</head>
+<body>
+<div class="promo-strip"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-3px;margin-right:5px"><path d="M3 7h11v10H3zM14 10h4l3 3v4h-7z"/><circle cx="7.5" cy="18" r="1.8"/><circle cx="17.5" cy="18" r="1.8"/></svg> নির্বাচিত পণ্যে <strong>ডেলিভারি চার্জ ফ্রি</strong> — আরও সাশ্রয়ে কেনাকাটা করুন</div>
+<header class="site-header">
+ <div class="header-inner">
+  <a class="brand" href="https://ghotimarket.com" aria-label="Ghoti Market হোম">
+   <img class="brand-logo" src="https://ghotimarket.com/logo.png" alt="Ghoti Market" onerror="this.onerror=null;this.style.display='none'">
+   <span><span class="brand-name">GHOTI MARKET</span><span class="brand-tagline">আপনার কেনা-বেচার বিশ্বস্ত ঠিকানা</span></span>
+  </a>
+  <label class="header-search" aria-label="পণ্য খুঁজুন">
+   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg>
+   <input id="searchInput" type="search" placeholder="পণ্য খুঁজুন..." autocomplete="off" aria-label="পণ্য খুঁজুন">
+  </label>
+  <div class="header-actions">
+   <a class="header-home" href="https://ghotimarket.com" aria-label="হোম">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 10 9-7 9 7"/><path d="M5 9v12h14V9M9 21v-7h6v7"/></svg>
+   </a>
+  </div>
+ </div>
+</header>
+<section class="hero-wrap">
+ <div class="hero-banner">
+  <div class="hero-copy">
+   <div class="hero-kicker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m13 2-9 12h7l-1 8 10-13h-7z"/></svg> FREE DELIVERY COLLECTION</div>
+   <h1>ফ্রি ডেলিভারি <span>পণ্যসমূহ</span></h1>
+   <p>পছন্দের পণ্য খুঁজে নিন। নির্বাচিত পণ্যে ডেলিভারি চার্জ নেই।</p>
+  </div>
+  <div class="hero-art" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h11v10H3zM14 10h4l3 3v4h-7z"/><circle cx="7.5" cy="18" r="1.8"/><circle cx="17.5" cy="18" r="1.8"/><path d="M5 4h7"/></svg></div>
+ </div>
+</section>
+<main class="content">
+ <div class="section-head">
+  <div><h2>ফ্রি ডেলিভারি পণ্য</h2><p>পছন্দের পণ্য দেখতে কার্ডে চাপ দিন</p></div>
+  <div class="counter" id="productCounter">লোড হচ্ছে...</div>
+ </div>
+ <section class="filters" aria-label="পণ্য খোঁজা ও সাজানো">
+  <label class="search-field">
+   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg>
+   <input id="secondarySearch" type="search" placeholder="পণ্যের নাম দিয়ে খুঁজুন..." autocomplete="off" aria-label="পণ্য খুঁজুন">
+  </label>
+  <select id="categoryFilter" aria-label="ক্যাটাগরি"><option value="">সকল ক্যাটাগরি</option></select>
+  <select id="sortFilter" aria-label="পণ্য সাজান">
+   <option value="default">ডিফল্ট সাজানো</option><option value="price-low">দাম: কম থেকে বেশি</option><option value="price-high">দাম: বেশি থেকে কম</option><option value="newest">নতুন পণ্য আগে</option>
+  </select>
+ </section>
+ <div class="product-grid" id="productGrid" aria-live="polite"></div>
+ <div class="loading-area" id="loadingContainer" aria-live="polite"><img alt="" src="https://ghotimarket.com/loading.gif"><span id="loadingText">পণ্য লোড হচ্ছে...</span></div>
+ <div id="scrollSentinel" style="height:2px" aria-hidden="true"></div>
+ <div class="end-message" id="endMessage">সব ফ্রি ডেলিভারি পণ্য দেখানো হয়েছে।</div>
+</main>
+<footer class="site-footer"><strong>GHOTI MARKET</strong> — দেশের প্ল্যাটফর্ম, দেশের মানুষের জন্য।<br><span>কেনাকাটা করুন <a href="https://ghotimarket.com">ghotimarket.com</a></span></footer>
+<nav class="bottom-nav">
+  <a href="https://ghotimarket.com" class="nav-item active"><i data-lucide="home"></i><span>Home</span></a>
+  <a href="https://ghotimarket.com/categories" class="nav-item"><i data-lucide="grid"></i><span>Categories</span></a>
+  <a href="https://ghotimarket.com/all-product" class="nav-item"><i data-lucide="box"></i><span>Products</span></a>
+  <a href="https://ghotimarket.com/contact" class="nav-item"><i data-lucide="headphones"></i><span>Support</span></a>
+  <a href="profile.html" class="nav-item"><i data-lucide="circle-user-round"></i><span>Profile</span></a>
+  <a href="https://seller.ghotimarket.com/signup" class="nav-item"><i data-lucide="store"></i><span>J.Seller</span></a>
+</nav>
+
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>lucide.createIcons();</script>
+<script type="module">
+import {initializeApp} from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+import {getFirestore,collection,query,where,orderBy,limit,startAfter,getDocs} from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+
+const firebaseConfig={apiKey:"AIzaSyBUhNhYvuo_FTvZ5RZR6Gn-4hsUY21S0XE",authDomain:"ghotimarket.firebaseapp.com",projectId:"ghotimarket",storageBucket:"ghotimarket.firebasestorage.app",messagingSenderId:"481257644093",appId:"1:481257644093:web:0dfc3699d6b3c86afeca54"};
+const PRODUCTS_COLLECTION="products",PAGE_SIZE=20;
+const $=id=>document.getElementById(id);
+const grid=$("productGrid"),counter=$("productCounter"),loading=$("loadingContainer"),loadingText=$("loadingText"),endMessage=$("endMessage");
+const searchInput=$("searchInput"),secondarySearch=$("secondarySearch"),categoryFilter=$("categoryFilter"),sortFilter=$("sortFilter");
+const money=new Intl.NumberFormat("bn-BD",{maximumFractionDigits:2});
+let db,loadedProducts=[],lastVisibleDoc=null,isLoading=false,hasMore=true;
+const seenIds=new Set();
+
+const icon=(paths,viewBox="0 0 24 24")=>`<svg viewBox="${viewBox}" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${paths}</svg>`;
+const ICONS={
+ store:icon('<path d="M3 10h18l-2-6H5z"/><path d="M5 10v10h14V10M9 20v-6h6v6"/><path d="M3 10a3 3 0 0 0 6 0 3 3 0 0 0 6 0 3 3 0 0 0 6 0"/>'),
+ external:icon('<path d="M14 4h6v6"/><path d="m20 4-9 9"/><path d="M18 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6"/>')
+};
+function syncSearch(source,target){if(target.value!==source.value)target.value=source.value;renderProducts()}
+searchInput.addEventListener("input",()=>syncSearch(searchInput,secondarySearch));
+secondarySearch.addEventListener("input",()=>syncSearch(secondarySearch,searchInput));
+categoryFilter.addEventListener("change",renderProducts);
+sortFilter.addEventListener("change",renderProducts);
+function showLoading(show,text="আরও পণ্য লোড হচ্ছে..."){loading.style.display=show?"flex":"none";loadingText.textContent=text}
+function safeString(v,fallback=""){return typeof v==="string"?v:fallback}
+function validImageUrl(v){try{const u=new URL(v);return u.protocol==="https:"||u.protocol==="http:"?u.href:""}catch{return""}}
+function formatPrice(v){return typeof v==="number"&&Number.isFinite(v)&&v>=0?`৳${money.format(v)}`:"মূল্য দেখুন"}
+function getDiscount(p){const price=Number(p.price),old=Number(p.oldPrice),supplied=Number(p.discount);if(Number.isFinite(supplied)&&supplied>0&&supplied<=100)return Math.round(supplied);if(Number.isFinite(price)&&Number.isFinite(old)&&old>price&&old>0)return Math.round((old-price)/old*100);return 0}
+function showState(title,message,iconMarkup=ICONS.store,retry=false){grid.replaceChildren();const panel=document.createElement("section");panel.className="state-panel";const iconEl=document.createElement("div");iconEl.className="state-icon";iconEl.innerHTML=iconMarkup;const h=document.createElement("h3");h.textContent=title;const p=document.createElement("p");p.textContent=message;panel.append(iconEl,h,p);if(retry){const b=document.createElement("button");b.type="button";b.className="retry-btn";b.textContent="আবার চেষ্টা করুন";b.addEventListener("click",()=>fetchProducts(true));panel.append(b)}grid.append(panel)}
+function makeCard(product){
+ const card=document.createElement("a");card.className="product-card";
+ const slug=safeString(product.slug).trim();
+ card.href=slug?`https://ghotimarket.com/product?${encodeURIComponent(slug)}`:"https://ghotimarket.com";
+ card.setAttribute("aria-label",`${safeString(product.name,"পণ্য")} — বিস্তারিত দেখুন`);
+ const imageWrap=document.createElement("div");imageWrap.className="image-wrap";
+ const category=document.createElement("span");category.className="category-badge";category.textContent=safeString(product.categoryName,"General");imageWrap.append(category);
+ const discount=getDiscount(product);if(discount>0){const badge=document.createElement("span");badge.className="discount-badge";badge.textContent=`${discount}% OFF`;imageWrap.append(badge)}
+ const img=document.createElement("img");img.loading="lazy";img.decoding="async";img.alt=safeString(product.name,"Ghoti Market পণ্য");img.src=validImageUrl(Array.isArray(product.images)?product.images[0]:"")||"https://placehold.co/600x600/fff2e9/ff6a00?text=Ghoti+Market";img.onerror=()=>{img.onerror=null;img.src="https://placehold.co/600x600/fff2e9/ff6a00?text=Ghoti+Market"};imageWrap.append(img);
+ const body=document.createElement("div");body.className="card-body";
+ const shop=document.createElement("div");shop.className="shop-line";shop.innerHTML=ICONS.store;const shopName=document.createElement("span");shopName.textContent=safeString(product.shopName,"Ghoti Market");shop.append(shopName);
+ const title=document.createElement("h3");title.className="product-name";title.textContent=safeString(product.name,"পণ্যের নাম");
+ const row=document.createElement("div");row.className="price-row";const current=document.createElement("span");current.className="current-price";current.textContent=formatPrice(product.price);row.append(current);
+ const price=Number(product.price),oldPrice=Number(product.oldPrice);if(Number.isFinite(oldPrice)&&Number.isFinite(price)&&oldPrice>price&&oldPrice>0){const old=document.createElement("span");old.className="old-price";old.textContent=formatPrice(oldPrice);row.append(old)}
+ body.append(shop,title,row);
+ if(Number.isFinite(oldPrice)&&Number.isFinite(price)&&oldPrice>price&&oldPrice>0){const saving=document.createElement("div");saving.className="saving";saving.textContent=`সাশ্রয় ${formatPrice(oldPrice-price)}`;body.append(saving)}
+ const footer=document.createElement("div");footer.className="card-bottom";const view=document.createElement("span");view.className="view-link";view.textContent="বিস্তারিত দেখুন";view.insertAdjacentHTML("beforeend",ICONS.external);footer.append(view);
+ card.append(imageWrap,body,footer);return card
+}
+function updateCategories(){const previous=categoryFilter.value;const categories=[...new Set(loadedProducts.map(p=>safeString(p.categoryName).trim()).filter(Boolean))].sort((a,b)=>a.localeCompare(b,"bn"));categoryFilter.replaceChildren();const all=document.createElement("option");all.value="";all.textContent="সকল ক্যাটাগরি";categoryFilter.append(all);for(const c of categories){const o=document.createElement("option");o.value=c;o.textContent=c;categoryFilter.append(o)}if(categories.includes(previous))categoryFilter.value=previous}
+function timestamp(p){const raw=p.createdAt;if(raw&&typeof raw.toDate==="function")return raw.toDate().getTime();const value=new Date(raw||0).getTime();return Number.isFinite(value)?value:0}
+function getVisibleProducts(){let result=[...loadedProducts];const term=searchInput.value.trim().toLocaleLowerCase();if(term)result=result.filter(p=>{const fields=[safeString(p.name),safeString(p.shopName),safeString(p.categoryName),...(Array.isArray(p.keywords)?p.keywords.map(k=>safeString(k)):[])];return fields.some(v=>v.toLocaleLowerCase().includes(term))});if(categoryFilter.value)result=result.filter(p=>p.categoryName===categoryFilter.value);switch(sortFilter.value){case"price-low":result.sort((a,b)=>(Number(a.price)||0)-(Number(b.price)||0));break;case"price-high":result.sort((a,b)=>(Number(b.price)||0)-(Number(a.price)||0));break;case"newest":result.sort((a,b)=>timestamp(b)-timestamp(a));break}return result}
+function renderProducts(){const visible=getVisibleProducts();grid.replaceChildren();if(!visible.length){showState(loadedProducts.length?"কোনো মিল পাওয়া যায়নি":"ফ্রি ডেলিভারি পণ্য পাওয়া যায়নি",loadedProducts.length?"অন্য নামে খুঁজুন অথবা ক্যাটাগরি পরিবর্তন করুন। সার্চ ইতিমধ্যে লোড হওয়া পণ্যের মধ্যে কাজ করে।":"এই মুহূর্তে দেখানোর মতো সক্রিয় ফ্রি ডেলিভারি পণ্য নেই।",ICONS.store)}else{const fragment=document.createDocumentFragment();visible.forEach(p=>fragment.append(makeCard(p)));grid.append(fragment)}counter.innerHTML=`<strong>${money.format(visible.length)}</strong>টি পণ্য`}
+async function fetchProducts(retry=false){if(isLoading||(!hasMore&&!retry))return;isLoading=true;showLoading(true,loadedProducts.length?"আরও পণ্য লোড হচ্ছে...":"পণ্য লোড হচ্ছে...");endMessage.style.display="none";try{if(retry&&hasMore===false){hasMore=true}const constraints=[where("freeDelivery","==",true),where("active","==",true),orderBy("createdAt","desc")];if(lastVisibleDoc)constraints.push(startAfter(lastVisibleDoc));constraints.push(limit(PAGE_SIZE));const snapshot=await getDocs(query(collection(db,PRODUCTS_COLLECTION),...constraints));if(snapshot.empty){hasMore=false;if(!loadedProducts.length)renderProducts();else endMessage.style.display="block";return}lastVisibleDoc=snapshot.docs[snapshot.docs.length-1];snapshot.docs.forEach(d=>{if(seenIds.has(d.id))return;const data=d.data();if(data.freeDelivery===true&&data.active===true){seenIds.add(d.id);loadedProducts.push({docId:d.id,...data})}});hasMore=snapshot.docs.length===PAGE_SIZE;updateCategories();renderProducts();if(!hasMore)endMessage.style.display="block"}catch(error){console.error("Product loading failed:",error);if(!loadedProducts.length)showState("পণ্য লোড করা যায়নি","ইন্টারনেট সংযোগ পরীক্ষা করে আবার চেষ্টা করুন।",ICONS.store,true);else{const p=document.createElement("section");p.className="state-panel";const h=document.createElement("h3");h.textContent="আরও পণ্য লোড হয়নি";const d=document.createElement("p");d.textContent="সংযোগ পরীক্ষা করে আবার চেষ্টা করুন।";const b=document.createElement("button");b.className="retry-btn";b.textContent="আবার চেষ্টা করুন";b.addEventListener("click",()=>fetchProducts(true));p.append(h,d,b);grid.append(p)}}finally{isLoading=false;showLoading(false)}}
+try{const app=initializeApp(firebaseConfig);db=getFirestore(app);const observer=new IntersectionObserver(entries=>{if(entries.some(e=>e.isIntersecting)&&hasMore&&!isLoading)fetchProducts()},{root:null,rootMargin:"300px 0px",threshold:0});observer.observe($("scrollSentinel"));fetchProducts()}catch(error){console.error("Firebase initialization failed:",error);showState("পেজ চালু করা যায়নি","পেজটি রিফ্রেশ করে আবার চেষ্টা করুন।",ICONS.store,true)}
+</script>
+</body>
+</html>
